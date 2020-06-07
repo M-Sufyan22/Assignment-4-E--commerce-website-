@@ -484,7 +484,7 @@ textarea:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .form-roww {
@@ -538,6 +538,7 @@ textarea:hover {
     padding: 15px;
     box-sizing: border-box;
     font-size: 14px;
+    z-index: -1;
 }
 
 .form input[type=submit] {
@@ -1457,6 +1458,10 @@ input[type=number]::-webkit-outer-spin-button {
         padding: 0;
         background-color: transparent;
     }
+    .pp:hover,
+    .pm:hover {
+        background-color: transparent;
+    }
     .product-quntity input[type=number] {
         font-size: 16px;
         width: 15px;
@@ -1971,7 +1976,6 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 14px;
     }
     .my-container {
-        height: 70vh;
         padding: 20px;
     }
     .cart-names {
