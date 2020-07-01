@@ -2,7 +2,7 @@
 
 // time counter
 
-var countDownDate = new Date("jun 30, 2020 24:00:00").getTime();
+var countDownDate = new Date("jun 30, 2021 24:00:00").getTime();
 
 
 var x = setInterval(function() {
