@@ -10,10 +10,22 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="swiper.min.css">
 </head>
 
-<body>
 
+<body onload="bodyload()">
+
+    <!-- pre loader -->
+
+
+    <div id="pre-loader" class="preloader">
+        <img src="pre-loader-image/watch.gif" alt="Loading...">
+    </div>
+
+    <!-- Go to top button -->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up"></i></button>
 
     <!-- Header -->
 
@@ -66,24 +78,19 @@
         <div class="single-p-container bg-light">
             <div class="single-p-row ">
                 <div class="single-img-col">
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img class="d-block w-100" src="product-images/popular4.png" alt="First slide">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper ">
+                            <div class="swiper-slide">
+                                <img src="product-images/slider-product1.jpg" alt="slide-image-1">
                             </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="product-images/slider-product1.jpg" alt="First slide">
+                            <div class="swiper-slide">
+                                <img src="product-images/slider-product2.jpg" alt="slide-image-2">
                             </div>
-                            <div class="carousel-item ">
-                                <img class="d-block w-100" src="product-images/slider-product2.jpg" alt="First slide">
+                            <div class="swiper-slide">
+                                <img src="product-images/popular4.png" alt="slide-image-3">
                             </div>
                         </div>
-                        <a class="prev" href="#carouselExampleControls " data-slide="prev"><i class="fa fa-angle-left"></i></a>
-                        <a class="next" href="#carouselExampleControls" data-slide="next"><i class="fa fa-angle-right"></i></a>
-
-                        <a class="prevd" href="#carouselExampleControls " data-slide-to="0"><i class="fa fa-circle"></i></a>
-                        <a class="centerd" href="#carouselExampleControls " data-slide-to="1"><i class="fa fa-circle"></i></a>
-                        <a class="nextd" href="#carouselExampleControls" data-slide-to="2"><i class="fa fa-circle"></i></a>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
 
@@ -256,7 +263,7 @@
     </div>
     <!-- /FOOTER -->
 
-
+    <script src="swiper.js"></script>
     <script src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

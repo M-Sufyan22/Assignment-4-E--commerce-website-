@@ -5,15 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>On Shop</title>
+    <title>One Shop</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="swiper.min.css">
 </head>
 
-<body>
+<body onload="bodyload()">
 
+    <!-- pre loader -->
+
+
+    <div id="pre-loader" class="preloader">
+        <img src="pre-loader-image/watch.gif" alt="Loading...">
+    </div>
+
+    <!-- Go to top button -->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up"></i></button>
 
     <!-- Header -->
 
@@ -63,36 +74,30 @@
     <!-- Navbars -->
 
     <!-- Slider -->
-
-    <div id="carouselExampleCaptions " class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item carasoul1 active">
-                <div class="carousel-caption">
-                    <h5>Select Your New Perfect Style</h5>
-                    <a href="shop.html" class="btn btn-info">SHOP NOW</a>
-                </div>
+    <section class="swiper-container">
+        <div class="swiper-wrapper ">
+            <div class="swiper-slide">
+                <img src="banner/banner11.jpg" alt="slide-image-1">
+                <h5>Select Your New Perfect Style</h5>
+                <a href="shop.html" class="btn btn-info">SHOP NOW</a>
             </div>
-
-            <div class="carousel-item carasoul2">
-                <div class="carousel-caption">
-                    <h5>Discover the best watch Online with us</h5>
-                    <a href="shop.html" class="btn btn-info">SHOP NOW</a>
-                </div>
+            <div class="swiper-slide"><img src="banner/banner4.jpg" alt="slide-image-2">
+                <h5>Discover the best watch Online with us</h5>
+                <a href="shop.html" class="btn btn-info">SHOP NOW</a>
             </div>
-            <div class="carousel-item carasoul3">
-                <div class="carousel-caption">
-                    <h5>Welcome to One-Shop</h5>
-                    <a href="shop.html" class="btn btn-info">SHOP NOW</a>
-                </div>
+            <div class="swiper-slide"><img src="banner/banner7.jpg" alt="slide-image-3">
+                <h5>Welcome to One-Shop</h5>
+                <a href="shop.html" class="btn btn-info">SHOP NOW</a>
             </div>
-            <div class="carousel-item carasoul4">
-                <div class="carousel-caption">
-                    <h5>Brand New Watches</h5>
-                    <a href="shop.html" class="btn btn-info">SHOP NOW</a>
-                </div>
+            <div class="swiper-slide"><img src="banner/banner8.jpg" alt="slide-image-4">
+                <h5>Brand New Watches</h5>
+                <a href="shop.html" class="btn btn-info">SHOP NOW</a>
             </div>
         </div>
-    </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </section>
     <!-- Slider -->
 
     <!-- Benefit -->
@@ -305,16 +310,14 @@
     <div class="copyrights">
         <span>Copyright &copy;2020. One-Shop-All rights reserved</span>
     </div>
+
     <!-- /FOOTER -->
-
-
-    <script src="app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
-
 </body>
+
+<script src="swiper.js"></script>
+<script src="app.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </html>
