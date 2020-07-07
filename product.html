@@ -4,13 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- To Stop Zoom-in-out -->
     <meta name="viewport" content="width=device-width, user-scalable=no">
+    <!-- For changing Address bar color For Chrome, firefox, opera & os -->
+    <meta name="theme-color" content="#4891f0">
+    <!-- For changing Address bar color For Windows Phone  -->
+    <meta name="msapplication-navbutton-color" content="#4891f0">
+    <!-- For changing Address bar color For Safari/IOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" href="assets/images/fav-icon/favicon.ico" type="image/gif" sizes="16x16">
     <title>Product</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="swiper.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+
 </head>
 
 
@@ -20,7 +30,7 @@
 
 
     <div id="pre-loader" class="preloader">
-        <img src="pre-loader-image/watch.gif" alt="Loading...">
+        <img src="assets/images/pre-loader-image/watch.gif" alt="Loading...">
     </div>
 
     <!-- Go to top button -->
@@ -31,7 +41,7 @@
 
     <header>
         <div class="logo">
-            <a href="index.html"><img src="Website-Logo/logo.png" alt="logo"></a>
+            <a href="index.html"><img src="assets/images/Website-Logo/logo.png" alt="logo"></a>
         </div>
         <div class="icons">
             <div class="search-box">
@@ -67,7 +77,11 @@
             </label>
             <div class="icon2">
                 <a href="login.html">Login<i class="fa fa-user-o"></i></a>
-                <a href="cart.html">My-Cart<i class="fa fa-shopping-cart"></i></a>
+                <a href="cart.html">
+                    My-Cart
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>2</span>
+                </a>
             </div>
         </div>
     </nav>
@@ -75,20 +89,38 @@
     <!-- Navbars -->
 
     <section>
+
         <div class="single-p-container bg-light">
+            <!-- bread cumb -->
+
+            <div class="container-fluid my-0">
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active">Product</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <!-- bread cumb -->
             <div class="single-p-row ">
                 <div class="single-img-col">
                     <div class="swiper-container">
-                        <div class="swiper-wrapper ">
+                        <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="product-images/slider-product1.jpg" alt="slide-image-1">
+                                <img src="assets/images/product-images/slider-product1.jpg" alt="slide-image-1">
                             </div>
                             <div class="swiper-slide">
-                                <img src="product-images/slider-product2.jpg" alt="slide-image-2">
+                                <img src="assets/images/product-images/slider-product2.jpg" alt="slide-image-2">
                             </div>
                             <div class="swiper-slide">
-                                <img src="product-images/popular4.png" alt="slide-image-3">
+                                <img src="assets/images/product-images/popular4.png" alt="slide-image-3">
                             </div>
+
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
@@ -174,42 +206,42 @@
 
             <div class="cardd">
                 <a href="product.html">
-                    <img src="product-images/popular5.png" alt="Luxury Brand Watch">
+                    <img src="assets/images/product-images/popular5.png" alt="Luxury Brand Watch">
                     <p>Luxury Brand Men Watch Good Quality Black
                         <br> <span class="text-danger">Rs 300</span></p>
                 </a><br>
                 <i class="fa fa-heart-o"></i>
-                <button class="btn2">ADD TO CART</button>
+                <a href="cart.html" class="btn2 ">ADD TO CART</a>
             </div>
 
             <div class="cardd">
                 <a href="product.html">
-                    <img src="product-images/popular6.png" alt="NAVIFORCE ArmyZinger">
+                    <img src="assets/images/product-images/popular6.png" alt="NAVIFORCE ArmyZinger">
                     <p>NAVIFORCE Army Business Band Japan Watch
                         <br> <span class="text-danger">Rs 250</span></p>
                 </a><br>
                 <i class="fa fa-heart-o"></i>
-                <button class="btn2">ADD TO CART</button>
+                <a href="cart.html" class="btn2 ">ADD TO CART</a>
             </div>
 
             <div class="cardd">
                 <a href="product.html">
-                    <img src="product-images/women1.png" alt="Blue Leather Skeleton Watch for Women.">
+                    <img src="assets/images/product-images/women1.png" alt="Blue Leather Skeleton Watch for Women.">
                     <p>Blue Leather Watch for Women.
                         <br> <span class="text-danger">Rs 350</span></p>
                 </a><br>
                 <i class="fa fa-heart-o"></i>
-                <button class="btn2">ADD TO CART</button>
+                <a href="cart.html" class="btn2 ">ADD TO CART</a>
             </div>
 
             <div class="cardd">
                 <a href="product.html">
-                    <img src="product-images/women2.png" alt="New Fashion Mobile Watch For Girls">
+                    <img src="assets/images/product-images/women2.png" alt="New Fashion Mobile Watch For Girls">
                     <p>New Pink lether Fashion Mobile Watch For Girls
                         <br> <span class="text-danger">Rs 250</span></p>
                 </a><br>
                 <i class="fa fa-heart-o"></i>
-                <button class="btn2">ADD TO CART</button>
+                <a href="cart.html" class="btn2 ">ADD TO CART</a>
             </div>
 
         </div>
@@ -226,7 +258,7 @@
         <div class="footer-row">
             <div class="footer-col-1">
                 <div class="f-logo">
-                    <a href="index.html"><img src="Website-Logo/logo2.png" alt="One-shop"></a>
+                    <a href="index.html"><img src="assets/images/Website-Logo/logo2.png" alt="One-shop"></a>
                 </div>
                 <p>mechanical watches still attracts interest from part of the watch-buying public, especially among the watch collectors.</p>
                 <ul class="footer-social">
@@ -263,8 +295,9 @@
     </div>
     <!-- /FOOTER -->
 
-    <script src="swiper.js"></script>
-    <script src="app.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/app1.js"></script>
+    <script src="assets/js/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

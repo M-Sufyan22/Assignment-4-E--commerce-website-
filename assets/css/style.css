@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -25,22 +26,24 @@ html {
 /* Go to top button */
 
 #myBtn {
-    display: none;
+    z-index: 9999;
     position: fixed;
     bottom: 20px;
     right: 30px;
-    z-index: 99;
-    border: none;
-    outline: none;
     background-color: #4891f0;
     color: white;
     font-weight: bold;
     cursor: pointer;
-    padding: 5px 15px;
-    border-radius: 30%;
-    font-size: 30px;
-    text-align: center;
-    box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.233);
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 40px;
+    line-height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: -5px 10px 35px rgba(0, 0, 0, 0.233);
+    display: none;
 }
 
 #myBtn:hover {
@@ -161,6 +164,22 @@ header {
     font-weight: bold;
     padding: 15px 20px;
     text-decoration: none;
+    position: relative;
+}
+
+.icon2 a span {
+    position: absolute;
+    font-size: 13px;
+    right: 5px;
+    top: 5px;
+    color: #fff;
+    font-weight: 600;
+    background-color: #f04888;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: -5px 2px 5px rgba(255, 255, 255, 0.096);
 }
 
 .icon2 a i {
@@ -181,18 +200,16 @@ header {
 }
 
 
-/* Banner */
+/* touch slider/ carousel */
 
 .swiper-container {
     width: 100%;
-    height: 50%;
     z-index: 0 !important;
 }
 
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -216,7 +233,7 @@ header {
 
 .swiper-slide img {
     width: 100%;
-    height: 60vh;
+    height: 40vh;
     object-fit: cover;
     object-position: center;
     background-position: center;
@@ -225,9 +242,9 @@ header {
 }
 
 .swiper-slide h5 {
+    position: absolute;
     color: #fff;
     font-size: 30px;
-    position: absolute;
 }
 
 .swiper-slide a {
@@ -237,48 +254,55 @@ header {
     bottom: 20%;
 }
 
+
+/* banners */
+
 .banner {
     width: 100%;
-    height: 400px;
-    background-blend-mode: multiply;
-    background-size: 100% 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
     position: relative;
+    background-blend-mode: multiply;
 }
 
 .banner1 {
-    background-image: url("banner/banner13.jpg"), linear-gradient(to right, #00000075, #00000081);
+    background-image: url("../images/banner-images/banner13.jpg"), linear-gradient(to right, #00000075, #00000081);
 }
 
 .banner2 {
-    background-image: url("banner/banner4.jpg"), linear-gradient(to right, #00000075, #00000081);
+    background-image: url("../images/banner-images//banner4.jpg"), linear-gradient(to right, #00000075, #00000081);
 }
 
 .banner3 {
-    background-image: url("banner/banner10.jpg"), linear-gradient(to right, #00000075, #00000081);
+    background-image: url("../images/banner-images/banner10.jpg"), linear-gradient(to right, #00000075, #00000081);
 }
 
 .banner4 {
-    background-image: url("banner/banner9.jpg"), linear-gradient(to right, #00000075, #00000081);
+    background-image: url("../images/banner-images/banner9.jpg"), linear-gradient(to right, #00000075, #00000081);
 }
 
 .banner5 {
-    background-image: url("banner/banner14.png"), linear-gradient(to right, #00000075, #00000081);
+    background-image: url("../images/banner-images/banner14.png"), linear-gradient(to right, #00000075, #00000081);
 }
 
 .banner h2 {
+    width: 100%;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.292);
-    padding-top: 200px;
     color: #fff;
     font-size: 50px;
     font-weight: 900;
     letter-spacing: 3px;
-    width: 100%;
-    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .about {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .about>div {
@@ -432,7 +456,7 @@ header {
 /* Contact Form */
 
 .contact_container {
-    margin-top: 60px;
+    margin-top: 30px;
     padding-bottom: 80px;
     border-bottom: solid 1px #ebebeb;
 }
@@ -535,7 +559,7 @@ textarea:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    padding: 20px 0 70px 0;
 }
 
 .form-roww {
@@ -692,6 +716,7 @@ ul li .btn {
 
 .cardd:hover {
     box-shadow: 4px 4px 20px 4px rgba(156, 154, 154, 0.7);
+    transform: translateY(5px);
 }
 
 .vi-btn {
@@ -753,17 +778,13 @@ ul li .btn {
     background-position: center;
 }
 
-.cardd:hover {
-    transform: translateY(10px);
-}
-
 .fa-heart-o {
     position: absolute;
     top: 20px;
     right: 20px;
     visibility: hidden;
-    transition: all 1.2s;
-    transform: translatex(50px);
+    transition: all .5s;
+    transform: translateY(-50px);
 }
 
 .btn2 {
@@ -772,7 +793,7 @@ ul li .btn {
     padding: 10px;
     border: none;
     outline: none;
-    color: #fff;
+    color: #fff !important;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-weight: 900;
@@ -780,8 +801,11 @@ ul li .btn {
     bottom: 0px;
     left: 0;
     visibility: hidden;
-    transition: all .5s;
-    transform: translatey(-450px);
+    transition: all .3s;
+    transform: translatey(50px);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
 }
 
 .cardd:hover .btn2 {
@@ -907,7 +931,7 @@ ul li .btn {
     justify-content: center;
     align-items: center;
     padding: 30px;
-    margin: 50px 0;
+    margin: 0px 0;
 }
 
 .cart-row {
@@ -1063,6 +1087,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .single-img-col {
     width: 32%;
+    border: 1px solid gray;
 }
 
 .single-p-about {
@@ -1356,10 +1381,6 @@ input[type=number]::-webkit-outer-spin-button {
     .single-img-col {
         width: 50%;
     }
-    .single-img-col img {
-        width: 350px;
-        height: 350px;
-    }
     .single-p-about {
         width: 50%;
     }
@@ -1469,7 +1490,6 @@ input[type=number]::-webkit-outer-spin-button {
     }
     .cart-container {
         padding: 10px;
-        margin: 40px 0;
     }
     .cart-names {
         margin-top: 20px;
@@ -1522,13 +1542,11 @@ input[type=number]::-webkit-outer-spin-button {
         width: 15px;
     }
     .single-img-col {
-        flex: none;
         width: 100%;
-        padding: 0;
+        border: none;
     }
     .single-img-col img {
-        width: 70%;
-        height: 350px
+        height: 400px;
     }
     .single-p-about {
         width: 100%;
@@ -1536,6 +1554,10 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media only screen and (max-width:660px) {
+    #myBtn {
+        right: 7px;
+        font-size: 30px;
+    }
     header {
         width: 100%;
     }
@@ -1548,7 +1570,7 @@ input[type=number]::-webkit-outer-spin-button {
         height: 60px;
         padding: 10px 0;
         z-index: 1111;
-        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.473);
+        box-shadow: -5px 2px 10px rgba(0, 0, 0, 0.274);
     }
     .icons {
         margin-top: 60px;
@@ -1595,6 +1617,13 @@ input[type=number]::-webkit-outer-spin-button {
         opacity: 0;
         transition: all 1s;
     }
+    .icon2 a span {
+        right: 80px;
+        top: 8px;
+        font-size: 10px;
+        width: 15px;
+        height: 15px;
+    }
     .nav-sec {
         z-index: -1;
         position: static;
@@ -1630,23 +1659,23 @@ input[type=number]::-webkit-outer-spin-button {
         padding: 20px 0;
     }
     .nav li a {
-        opacity: 0;
-        transition: all 1s;
+        margin-left: 300px;
+        transition: ease 0.8s;
     }
     .nav li:nth-child(1) a {
         transition-delay: 0.3s;
     }
     .nav li:nth-child(2) a {
-        transition-delay: 0.6s;
+        transition-delay: 0.5s !important;
     }
     .nav li:nth-child(3) a {
-        transition-delay: 9s;
+        transition-delay: 0.7s;
     }
     .nav li:nth-child(4) a {
-        transition-delay: 1s;
+        transition-delay: 0.8s;
     }
     #nav:checked~.nav li a {
-        opacity: 1;
+        margin-left: 0px;
     }
     .nav-btn {
         position: fixed;
@@ -1680,6 +1709,7 @@ input[type=number]::-webkit-outer-spin-button {
     }
     #nav:checked+.nav-btn i:nth-child(1) {
         transform: rotate(50deg);
+        margin-top: 5px;
     }
     #nav:checked+.nav-btn i:nth-child(2) {
         opacity: 0;
@@ -1852,15 +1882,10 @@ input[type=number]::-webkit-outer-spin-button {
     .swiper-container {
         height: 50%;
     }
-    .carousel-item {
-        height: 300px;
-    }
     .banner {
-        height: 300px;
+        height: 30vh;
     }
     .banner h2 {
-        height: 300px;
-        padding-top: 120px;
         font-size: 35px;
     }
     .form-box {
@@ -1910,17 +1935,8 @@ input[type=number]::-webkit-outer-spin-button {
     .single-p-row {
         padding: 0px 0 25px 0;
     }
-    .single-img-col {
-        padding: 0 0 10px 0;
-        flex-direction: row;
-        border-bottom: 1px solid gray;
-    }
     .single-img-col img {
-        height: 350px;
-        width: 100%;
-        background-position: center;
-        background-size: cover cover;
-        border: none;
+        height: 250px;
     }
     .single-p-deli {
         border-top: 1px solid gray;
